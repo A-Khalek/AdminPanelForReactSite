@@ -58485,22 +58485,25 @@ var Manu = /*#__PURE__*/function (_Component) {
       sideNavClose: "sidenavClose",
       mainDivOverlay: "main-overlay-close"
     };
+    _this.showHideSideNav = _this.showHideSideNav(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(Manu, [{
     key: "showHideSideNav",
     value: function showHideSideNav() {
-      if (this.state.sideNav == false) {
+      if (this.state.sideNav === false) {
         this.setState({
           sideNav: true,
-          sideNavClose: "sidenavOpen",
+          NavText: "",
+          sideNavClass: "sidenavOpen",
           mainDivOverlay: "main-overlay-open"
         });
       } else {
         this.setState({
           sideNav: false,
-          sideNavClose: "sidenavClose",
+          NavText: "d-none",
+          sideNavClass: "sidenavClose",
           mainDivOverlay: "main-overlay-close"
         });
       }

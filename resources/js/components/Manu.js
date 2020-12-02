@@ -12,17 +12,18 @@ class Manu extends Component {
             sideNavClose:"sidenavClose",
             mainDivOverlay:"main-overlay-close"
         }
+        this.showHideSideNav=this.showHideSideNav(this);
     }
+
 
     showHideSideNav(){
-        if (this.state.sideNav==false){
-            this.setState({sideNav:true,sideNavClose:"sidenavOpen",mainDivOverlay:"main-overlay-open"})
+        if(this.state.sideNav===false){
+            this.setState({sideNav:true,NavText:"",sideNavClass:"sidenavOpen",mainDivOverlay:"main-overlay-open"})
         }
         else {
-            this.setState({sideNav:false,sideNavClose:"sidenavClose",mainDivOverlay:"main-overlay-close"})
+            this.setState({sideNav:false,NavText:"d-none",sideNavClass:"sidenavClose",mainDivOverlay:"main-overlay-close"})
         }
     }
-
 
 
     render() {
@@ -35,7 +36,10 @@ class Manu extends Component {
                 <div className={this.state.sideNavClose}>
                     <NavLink className="my-8 p-0 text-white" to="#"><FontAwesomeIcon icon={faHome}/>Home</NavLink>
                 </div>
-                <div onClick={this.showHideSideNav} className={this.state.mainDivOverlay}></div>
+
+                <div onClick={this.showHideSideNav} className={this.state.mainDivOverlay}>
+
+                </div>
 
             </Fragment>
         )
