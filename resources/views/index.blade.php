@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
 
+
 </head>
 
 
 <body>
-<h1>This is h1</h1>
 
 <div id="root"></div>
 
