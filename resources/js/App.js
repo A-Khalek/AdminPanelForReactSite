@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
-import Menu from './components/Manu';
+import Menu from './components/Menu';
 
 class App extends Component {
     render() {
         return (
             <div>
-                <Menu/>
+                <Menu>
+                    <h1>I am child</h1>
+                </Menu>
             </div>
         );
     }
